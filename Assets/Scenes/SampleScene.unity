@@ -150,6 +150,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f25ae36a29742cdbf5c52e4ba0c8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  funnel:
+    topDiameter: 4
+    bottomDiameter: 1
+    slopingHeight: 2
+    tubeHeight: 2
+    Segments: 24
 --- !u!33 &17592546
 MeshFilter:
   m_ObjectHideFlags: 0

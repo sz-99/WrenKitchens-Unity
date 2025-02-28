@@ -1,6 +1,7 @@
 using Unity.Collections;
 using UnityEditor;
 using UnityEngine;
+[System.Serializable]
 public class Funnel
 {
     public float topDiameter = 4f;
@@ -13,7 +14,7 @@ public class Funnel
 [RequireComponent(typeof(MeshRenderer), typeof(MeshFilter))]
 public class ProceduralFunnel : MonoBehaviour
 {
-    [SerializeField] Funnel funnel = new Funnel();
+    [SerializeField] private Funnel funnel = new Funnel();
 
     private MeshFilter meshFilter;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -121,4 +122,22 @@ public class ProceduralFunnel : MonoBehaviour
 
         meshFilter.mesh = mesh;
     }
+
+    void OnValidate()
+    {
+         if(meshFilter == null)
+             meshFilter = GetComponent<MeshFilter>();
+        GenerateProceduralFunnel();
+        
+    }
+    // public void UpdateFunnel(float topD, float bottomD, float slopeH, float tubeH, int segments)
+    // {
+    //     funnel.topDiameter = topD;
+    //     funnel.bottomDiameter = bottomD;
+    //     funnel.slopingHeight = slopeH;
+    //     funnel.tubeHeight = tubeH;
+    //     funnel.Segments = segments;
+
+    //     GenerateProceduralFunnel();
+    // }
 }
