@@ -1,0 +1,42 @@
+#FunnelControlPane {
+}
+/* Style for the main UI panel */
+#FunnelControlPanel {
+    width: 300px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/* Style for Labels */
+Label {
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style for Sliders */
+Slider {
+    width: 250px;
+    height: 10px;
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Hover Effect for Sliders */
+Slider:hover {
+    background-color: #777;
+}
+
+/* Style for the "Customise Funnel" Title */
+#CustomiseFunnel {
+    font-size: 18px;
+    font-weight: bold;
+    color: cyan;
+    margin-bottom: 10px;
+}
