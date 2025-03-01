@@ -123,13 +123,13 @@ public class ProceduralFunnel : MonoBehaviour
         meshFilter.mesh = mesh;
     }
 
-    void OnValidate()
-    {
-         if(meshFilter == null)
-             meshFilter = GetComponent<MeshFilter>();
-        GenerateProceduralFunnel();
+    // void OnValidate()
+    // {
+    //      if(meshFilter == null)
+    //          meshFilter = GetComponent<MeshFilter>();
+    //     GenerateProceduralFunnel();
         
-    }
+    // }
     
     public float GetTopDiameter() => funnel.topDiameter;
     public float GetBottomDiameter() => funnel.bottomDiameter;
