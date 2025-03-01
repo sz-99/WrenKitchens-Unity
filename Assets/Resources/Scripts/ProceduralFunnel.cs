@@ -4,7 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class Funnel
 {
-    public float topDiameter = 4f;
+    public float topDiameter = 4f; 
     public float bottomDiameter = 1f;
     public float slopingHeight = 2f;
     public float tubeHeight = 2f;
@@ -15,6 +15,35 @@ public class Funnel
 public class ProceduralFunnel : MonoBehaviour
 {
     [SerializeField] private Funnel funnel = new Funnel();
+
+        public float TopDiameter
+        {
+            get { return funnel.topDiameter; }
+            set { funnel.topDiameter = value; GenerateProceduralFunnel(); }
+        }
+
+        public float BottomDiameter
+        {
+            get { return funnel.bottomDiameter; }
+            set { funnel.bottomDiameter = value; GenerateProceduralFunnel(); }
+        }
+
+        public float SlopingHeight
+        {
+            get { return funnel.slopingHeight; }
+            set { funnel.slopingHeight = value; GenerateProceduralFunnel(); }
+        }
+
+        public float TubeHeight
+        {
+            get { return funnel.tubeHeight; }
+            set { funnel.tubeHeight = value; GenerateProceduralFunnel(); }
+        }
+        public int Segments
+        {
+            get { return funnel.Segments; }
+            set { funnel.Segments = value; GenerateProceduralFunnel(); }
+        }
 
     private MeshFilter meshFilter;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -123,13 +152,13 @@ public class ProceduralFunnel : MonoBehaviour
         meshFilter.mesh = mesh;
     }
 
+
     
-    
-    public float GetTopDiameter() => funnel.topDiameter;
-    public float GetBottomDiameter() => funnel.bottomDiameter;
-    public float GetSlopingHeight() => funnel.slopingHeight;
-    public float GetTubeHeight() => funnel.tubeHeight;
-    public int GetSegments() => funnel.Segments;
+    // public float GetTopDiameter() => funnel.topDiameter;
+    // public float GetBottomDiameter() => funnel.bottomDiameter;
+    // public float GetSlopingHeight() => funnel.slopingHeight;
+    // public float GetTubeHeight() => funnel.tubeHeight;
+    // public int GetSegments() => funnel.Segments;
     
     public void UpdateFunnel(float topD, float bottomD, float slopeH, float tubeH, int segments)
     {

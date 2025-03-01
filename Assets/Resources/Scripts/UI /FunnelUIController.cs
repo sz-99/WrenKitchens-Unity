@@ -38,11 +38,11 @@ public class FunnelUIController : MonoBehaviour
         return;
     }
 
-    topDSlider.value = funnelScript.GetTopDiameter();
-    bottomDSlider.value = funnelScript.GetBottomDiameter();
-    slopeHSlider.value = funnelScript.GetSlopingHeight();
-    tubeHSlider.value = funnelScript.GetTubeHeight();
-    segmentsSlider.value = funnelScript.GetSegments();
+    topDSlider.value = funnelScript.TopDiameter;
+    bottomDSlider.value = funnelScript.BottomDiameter;
+    slopeHSlider.value = funnelScript.SlopingHeight;
+    tubeHSlider.value = funnelScript.TubeHeight;
+    segmentsSlider.value = funnelScript.Segments;
 
     topDSlider.RegisterValueChangedCallback(evt => UpdateFunnel());
     bottomDSlider.RegisterValueChangedCallback(evt => UpdateFunnel());
