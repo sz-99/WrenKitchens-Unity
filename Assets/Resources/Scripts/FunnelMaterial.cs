@@ -25,7 +25,7 @@ public class FunnelMaterial : MonoBehaviour
             return;
         }
 
-        funnelRenderer.material = rustMaterial;
+        funnelRenderer.material = fibreMaterial;
         funnelRenderer.material.mainTextureScale = textureTiling;
     }
 
@@ -42,6 +42,20 @@ public class FunnelMaterial : MonoBehaviour
         if (funnelRenderer != null && rustMaterial != null)
         {
             funnelRenderer.material = rustMaterial;
+        }
+    }
+
+    public void SetTextureScale(float s)
+    {
+        textureTiling = new Vector2(s, s);
+        updateTiling();
+    }
+
+    private void updateTiling()
+    {
+        if (funnelRenderer != null && funnelRenderer.material != null)
+        {
+            funnelRenderer.material.mainTextureScale = textureTiling;
         }
     }
 }
