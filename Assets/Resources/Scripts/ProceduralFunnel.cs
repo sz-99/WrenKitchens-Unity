@@ -102,7 +102,8 @@ public class ProceduralFunnel : MonoBehaviour
             float x = Mathf.Cos(angle) * (funnel.bottomDiameter / 2);
             float z = Mathf.Sin(angle) * (funnel.bottomDiameter / 2);
             vertices[vertIndex] = new Vector3(x, 0, z);
-            uvs[vertIndex] = new Vector2(i/(float)funnel.Segments, 0);
+            float v = funnel.tubeHeight / (funnel.slopingHeight + funnel.tubeHeight); 
+            uvs[vertIndex] = new Vector2(i / (float)funnel.Segments, v);
             vertIndex++;
         }
 
