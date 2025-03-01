@@ -130,14 +130,21 @@ public class ProceduralFunnel : MonoBehaviour
         GenerateProceduralFunnel();
         
     }
-    // public void UpdateFunnel(float topD, float bottomD, float slopeH, float tubeH, int segments)
-    // {
-    //     funnel.topDiameter = topD;
-    //     funnel.bottomDiameter = bottomD;
-    //     funnel.slopingHeight = slopeH;
-    //     funnel.tubeHeight = tubeH;
-    //     funnel.Segments = segments;
+    
+    public float GetTopDiameter() => funnel.topDiameter;
+    public float GetBottomDiameter() => funnel.bottomDiameter;
+    public float GetSlopingHeight() => funnel.slopingHeight;
+    public float GetTubeHeight() => funnel.tubeHeight;
+    public int GetSegments() => funnel.Segments;
+    
+    public void UpdateFunnel(float topD, float bottomD, float slopeH, float tubeH, int segments)
+    {
+        funnel.topDiameter = topD;
+        funnel.bottomDiameter = bottomD;
+        funnel.slopingHeight = slopeH;
+        funnel.tubeHeight = tubeH;
+        funnel.Segments = segments;
 
-    //     GenerateProceduralFunnel();
-    // }
+        GenerateProceduralFunnel();
+    }
 }
