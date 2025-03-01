@@ -10,14 +10,38 @@ public class FunnelMaterial : MonoBehaviour
     void Start()
     {
         funnelRenderer = GetComponent<MeshRenderer>();
-        fibreMaterial = fibreMaterial ?? Resources.Load<Material>("Assets/Resources/Materials/Tilable_Scratched.mat");
-        rustMaterial = rustMaterial ?? Resources.Load<Material>("Assets/Resources/Materials/Tilable_Fibre.mat");
+        fibreMaterial = Resources.Load<Material>("Materials/Tilable_Scratched");
+        rustMaterial = Resources.Load<Material>("Materials/Tilable_Fibre");
+
+        if (funnelRenderer == null)
+        {
+            Debug.LogError("MeshRenderer not found on object!");
+            return;
+        }
+
+        if (rustMaterial == null || fibreMaterial == null)
+        {
+            Debug.LogError("One or both materials failed to load. Check Resources folder path!");
+            return;
+        }
+
         funnelRenderer.material = rustMaterial;
+        funnelRenderer.material.mainTextureScale = textureTiling;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ApplyFibreMaterial()
     {
-        
+        if (funnelRenderer != null && fibreMaterial != null)
+        {
+            funnelRenderer.material = fibreMaterial;
+        }
+    }
+
+    public void ApplyRustMaterial()
+    {
+        if (funnelRenderer != null && rustMaterial != null)
+        {
+            funnelRenderer.material = rustMaterial;
+        }
     }
 }
