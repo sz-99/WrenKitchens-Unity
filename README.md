@@ -16,7 +16,7 @@ The script dynamically creates a mesh by:
 
 ## Usage
 1. Pull this project using Git:
-`git clone https://github.com/your-repository-name/procedural-funnel-generator.git`
+`git clone https://github.com/sz-99/WrenKitchens-Unity.git`
 3. **Run the scene** to see the procedurally generated funnel.
 4. **Modify the funnel parameters** (diameters, height, segments) in the **UI** for realtime rendering of dynamic funnel.
 
