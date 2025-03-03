@@ -35,6 +35,7 @@ This project generates a **procedural funnel mesh** in Unity using **C#**. The f
 ### 1️⃣ Clone the Repository  
 ```sh
 git clone https://github.com/sz-99/WrenKitchens-Unity.git
+```
 
 ### 2️⃣ **Run the scene** to the main menu. Press **Start** to see the procedurally generated funnel.
 
