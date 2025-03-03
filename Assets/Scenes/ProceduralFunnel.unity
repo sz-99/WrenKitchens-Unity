@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 17592546}
   - component: {fileID: 17592545}
   - component: {fileID: 17592549}
+  - component: {fileID: 17592550}
   m_Layer: 0
   m_Name: Funnel Script
   m_TagString: Untagged
@@ -238,6 +239,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textureTiling: {x: 1, y: 1}
+--- !u!114 &17592550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17592544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb7e6e85a60045e690521a6ad002b62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 25
 --- !u!1 &314424379
 GameObject:
   m_ObjectHideFlags: 0

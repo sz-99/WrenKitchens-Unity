@@ -116,13 +116,13 @@ public class ProceduralFunnel : MonoBehaviour
             int bottomA = i + funnel.Segments;
             int bottomB = next + funnel.Segments;
 
-            triangles[triIndex++] = topA;
+            triangles[triIndex++] = bottomB;
             triangles[triIndex++] = bottomA;
-            triangles[triIndex++] = bottomB;
-
             triangles[triIndex++] = topA;
-            triangles[triIndex++] = bottomB;
+
             triangles[triIndex++] = topB;
+            triangles[triIndex++] = bottomB;
+            triangles[triIndex++] = topA;
         }
 
         //tube tris
@@ -135,13 +135,13 @@ public class ProceduralFunnel : MonoBehaviour
             int bottomA = i + offset;
             int bottomB = next + offset;
 
-            triangles[triIndex++] = lowerA;
+            triangles[triIndex++] = bottomB;
             triangles[triIndex++] = bottomA;
-            triangles[triIndex++] = bottomB;
-
             triangles[triIndex++] = lowerA;
+
+            triangles[triIndex++] = lowerB;
             triangles[triIndex++] = bottomB;
-            triangles[triIndex++] = lowerB; 
+            triangles[triIndex++] = lowerA; 
         }
 
         //assign
